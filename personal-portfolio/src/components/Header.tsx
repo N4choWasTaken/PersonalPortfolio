@@ -9,7 +9,7 @@ function Header() {
         <>
         <div className="grid grid-cols-3">
             {/*Left Part*/}
-            <div className="h-screen flex flex-col items-center">
+        	<div className="h-screen flex flex-col items-center">
                 <div className="w-2/3 h-full bg-neutral shadow-lg"></div>
             </div>
 
