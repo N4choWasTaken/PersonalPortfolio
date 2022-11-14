@@ -3,12 +3,15 @@ import { useNavigate } from "react-router-dom";
 function Terminal() {
     const navigation = useNavigate();
 
-    const handleTerminalInput = (command:string) => {
+    const handleTerminalInput = (e: React.FormEvent<HTMLInputElement>) => {
+		const command = e.currentTarget.value;
+		console.log(command)
         command.toLowerCase();
 
         switch (command) {
             case 'cd ./projects':
                 navigation('/projects')
+				e.currentTarget.value = "";
                 break;
 
             default:
@@ -24,7 +27,7 @@ function Terminal() {
                 <pre data-prefix="$"><code className="text-success">Website is ready to run!</code></pre>
             </div>
 
-            <input className="w-full h-fit rounded-lg p-1 mt-4 bg-neutral shadow-lg" placeholder="Type !help to start" onChange={() => handleTerminalInput('cd ./projects')}/>
+            <input className="w-full h-fit rounded-lg p-1 mt-4 bg-neutral shadow-lg" placeholder="Type !help to start" onChange={handleTerminalInput}/>
 
         </div>
         </>
