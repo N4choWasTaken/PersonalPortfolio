@@ -36,7 +36,7 @@ function Terminal() {
     return (
         <>
         <div className="w-1/2 h-3/5">
-            <div className="w-full h-4/5 mockup-code shadow-lg">
+            <div className="w-full h-4/5 mockup-code shadow-lg overflow-y-scroll scrollbar-hide">
                 <pre data-prefix="$"><code className="text-success">Website is ready to run!</code></pre>
 				{Store.outputs.map((output) => (
 					<pre data-prefix={output.prefix}><code className={`text-${output.state}`}>{output.message}</code></pre>
