@@ -10,7 +10,7 @@ function Header() {
         <div className="grid grid-cols-3  font-sans">
             {/*Left Part*/}
         	<div className="h-screen flex flex-col items-center">
-                <div className="w-2/3 h-full bg-neutral shadow-lg">
+                <div className="w-2/3 h-full bg-neutral shadow-lg bg-[url(../images/Thierry.png)] bg-cover bg-center">
 					<div className="relative top-3/4 w-full h-1/6 bg-transparent shadow-lg flex flex-col justify-evenly items-center"> {/*Personal information */}
 						<h1 className="font-bold text-5xl text-primary">Thierry Pfister</h1>
 						<div className="w-3/4 h-1/2 flex flex-row justify-evenly items-center">
