@@ -14,6 +14,10 @@ function Terminal() {
 				Store.append({state: "success", message: "/projects, /aboutMe", prefix: ">"})
 				e.currentTarget.value = "";
                 break;
+			case 'clear':
+				Store.clear();
+				e.currentTarget.value = "";
+                break;
             case 'cd ..':
 				Store.append({state: "warning", message: "changing directory...", prefix: ">"})
                 navigation(-1)
