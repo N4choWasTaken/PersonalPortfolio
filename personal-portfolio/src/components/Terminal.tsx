@@ -10,6 +10,10 @@ function Terminal() {
         command.toLowerCase();
 
         switch (command) {
+			case '!help':
+				Store.append({state: "info", message: "Hey there and welcome to my little cv \n This website is build like a terminal. \n So with ls you see my route structure. (directories) \n With cd you can move between my routes", prefix: ">"})
+				e.currentTarget.value = "";
+                break;
             case 'ls':
 				Store.append({state: "success", message: "/projects, /aboutMe", prefix: ">"})
 				e.currentTarget.value = "";
